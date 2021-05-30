@@ -18,7 +18,10 @@ export const PhoneValue = () => {
       return dispatch(setPhoneNumber(""));
     }
 
-    const countryDialCodeValueFormatted = countryValue.callingCodes[0];
+    const countryDialCodeValueFormatted = countryValue.callingCodes[0].replace(
+      /[-+ ]/g,
+      ""
+    );
 
     const phoneInputValueFormatted = phoneInputValue
       .trim()

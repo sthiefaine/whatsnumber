@@ -25,7 +25,7 @@ export default function Form() {
     }, 1500);
   };
 
-  const handleStartChat = (): string => {
+  const whatsappUrl = (): string => {
     return "https://wa.me/" + phoneNumberValue;
   };
 
@@ -38,7 +38,7 @@ export default function Form() {
       </div>
 
       <div className={styles.button__container}>
-        <Link href={handleStartChat()}>
+        <Link href={whatsappUrl()}>
           <a className="a--nostyle" rel="noopener noreferrer" target="_blank">
             <button className={styles.button}>
               <p>Start Chat</p>
