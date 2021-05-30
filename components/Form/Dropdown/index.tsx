@@ -25,6 +25,7 @@ const Dropdown = () => {
       const defaultCountry = countriesList.find(
         (element) =>
           element.alpha2Code ===
+            window.navigator.language.substring(3, 5).toUpperCase() ||
           window.navigator.language.substring(0, 2).toUpperCase()
       );
 
@@ -56,9 +57,9 @@ const Dropdown = () => {
                 countryInfos.alpha2Code.toLowerCase() +
                 ".svg)",
               backgroundRepeat: "no-repeat",
-              backgroundPosition: "7px 7px",
+              backgroundPosition: "10px 8px",
               paddingLeft: "20px",
-              backgroundSize: "40px",
+              backgroundSize: "30px",
             }}
           >
             {"+" + countryInfos.callingCodes[0] || ""}
@@ -77,8 +78,8 @@ const Dropdown = () => {
           >
             <Image
               src={`/image/flags/${option.alpha2Code.toLowerCase()}.svg`}
-              width="42px"
-              height="42px"
+              width="30px"
+              height="30px"
               alt={option.name}
             />
             <span>+{option.callingCodes[0]}</span>

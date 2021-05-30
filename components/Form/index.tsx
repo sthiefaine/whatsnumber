@@ -22,7 +22,7 @@ export default function Form() {
     setCopy(true);
     setTimeout(() => {
       setCopy(false);
-    }, 1000);
+    }, 1500);
   };
 
   const handleStartChat = (): string => {
@@ -39,10 +39,12 @@ export default function Form() {
 
       <div className={styles.button__container}>
         <Link href={handleStartChat()}>
-          <button className={styles.button}>
-            <p>Start Chat</p>
-            <WhatsAppIcon />
-          </button>
+          <a className="a--nostyle" rel="noopener noreferrer" target="_blank">
+            <button className={styles.button}>
+              <p>Start Chat</p>
+              <WhatsAppIcon />
+            </button>
+          </a>
         </Link>
         <CopyToClipboard text={phoneNumberValue} onCopy={() => handleCopy()}>
           <button className={styles.button}>
