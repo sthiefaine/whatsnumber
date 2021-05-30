@@ -3,6 +3,8 @@ import styles from "../styles/Home.module.css";
 import Form from "../components/Form";
 
 import { PhoneValue } from "../hooks/phoneValue";
+
+import { HomeIcon, HistoryIcon, SettingIcon } from "../icons/navigation";
 const Home = () => {
   console.log("render HOME");
   PhoneValue();
@@ -37,13 +39,19 @@ const Home = () => {
             <nav className={styles.footer__nav}>
               <ul className={styles.footer__nav__items}>
                 <li className={styles.footer__nav__item}>
-                  <a href="#home">Acc</a>
+                  <a className={styles.footer__nav__item__a} href="#home">
+                    <HomeIcon />
+                  </a>
                 </li>
                 <li className={styles.footer__nav__item}>
-                  <a href="#history">His</a>
+                  <a className={styles.footer__nav__item__a} href="#history">
+                    <HistoryIcon />
+                  </a>
                 </li>
                 <li className={styles.footer__nav__item}>
-                  <a href="#setting">Para</a>
+                  <a className={styles.footer__nav__item__a} href="#setting">
+                    <SettingIcon />
+                  </a>
                 </li>
               </ul>
             </nav>
