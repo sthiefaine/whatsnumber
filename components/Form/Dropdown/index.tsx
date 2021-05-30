@@ -22,11 +22,13 @@ const Dropdown = () => {
 
   useEffect(() => {
     if (firstRender) {
+      console.log("ici", window.navigator.language.substring(3, 5));
+      console.log("ici 2", window.navigator.language);
+      const navLangCode =
+        window.navigator.language.substring(3, 5) ||
+        window.navigator.language.substring(0, 2);
       const defaultCountry = countriesList.find(
-        (element) =>
-          element.alpha2Code ===
-            window.navigator.language.substring(3, 5).toUpperCase() ||
-          window.navigator.language.substring(0, 2).toUpperCase()
+        (element) => element.alpha2Code === navLangCode.toUpperCase()
       );
 
       defaultCountry && dispatch(setCountry(defaultCountry));
