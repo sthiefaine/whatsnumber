@@ -25,9 +25,7 @@ export default function Form() {
     }, 1500);
   };
 
-  const whatsappUrl = (): string => {
-    return "https://wa.me/" + phoneNumberValue;
-  };
+  const whatsappUrl = "https://wa.me/" + phoneNumberValue;
 
   return (
     <>
@@ -38,7 +36,7 @@ export default function Form() {
       </div>
 
       <div className={styles.button__container}>
-        <Link href={whatsappUrl()}>
+        <Link href={whatsappUrl}>
           <a className="a--nostyle" rel="noopener noreferrer" target="_blank">
             <button className={styles.button}>
               <p>Start Chat</p>
@@ -46,7 +44,7 @@ export default function Form() {
             </button>
           </a>
         </Link>
-        <CopyToClipboard text={phoneNumberValue} onCopy={() => handleCopy()}>
+        <CopyToClipboard text={whatsappUrl} onCopy={() => handleCopy()}>
           <button className={styles.button}>
             <p>{copy ? "Copied ✓" : "Copy ⧉"}</p>
           </button>
