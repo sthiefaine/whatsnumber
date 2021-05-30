@@ -38,7 +38,7 @@ const Dropdown = () => {
     setOpen(!open);
   }
 
-  function selectOption(option) {
+  function selectOption(option: any) {
     dispatch(setCountry(option));
     setOpen(false);
   }
