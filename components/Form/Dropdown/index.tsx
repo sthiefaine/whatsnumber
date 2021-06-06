@@ -22,10 +22,13 @@ const Dropdown = () => {
 
   useEffect(() => {
     if (firstRender) {
+      console.log("ici", window.navigator.language.substring(3, 5));
+      console.log("ici 2", window.navigator.language);
+      const navLangCode =
+        window.navigator.language.substring(3, 5) ||
+        window.navigator.language.substring(0, 2);
       const defaultCountry = countriesList.find(
-        (element) =>
-          element.alpha2Code ===
-          window.navigator.language.substring(0, 2).toUpperCase()
+        (element) => element.alpha2Code === navLangCode.toUpperCase()
       );
 
       defaultCountry && dispatch(setCountry(defaultCountry));
@@ -38,7 +41,7 @@ const Dropdown = () => {
     setOpen(!open);
   }
 
-  function selectOption(option) {
+  function selectOption(option: any) {
     dispatch(setCountry(option));
     setOpen(false);
   }
@@ -56,9 +59,9 @@ const Dropdown = () => {
                 countryInfos.alpha2Code.toLowerCase() +
                 ".svg)",
               backgroundRepeat: "no-repeat",
-              backgroundPosition: "7px 7px",
+              backgroundPosition: "10px 8px",
               paddingLeft: "20px",
-              backgroundSize: "40px",
+              backgroundSize: "30px",
             }}
           >
             {"+" + countryInfos.callingCodes[0] || ""}
@@ -77,8 +80,8 @@ const Dropdown = () => {
           >
             <Image
               src={`/image/flags/${option.alpha2Code.toLowerCase()}.svg`}
-              width="42px"
-              height="42px"
+              width="30px"
+              height="30px"
               alt={option.name}
             />
             <span>+{option.callingCodes[0]}</span>
