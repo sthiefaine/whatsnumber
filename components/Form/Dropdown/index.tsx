@@ -58,7 +58,7 @@ const Dropdown = () => {
               backgroundRepeat: "no-repeat",
               backgroundPosition: "7px 7px",
               paddingLeft: "20px",
-              backgroundSize: "40px",
+              backgroundSize: "42px",
             }}
           >
             {"+" + countryInfos.callingCodes[0] || ""}
