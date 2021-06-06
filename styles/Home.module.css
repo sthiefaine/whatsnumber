@@ -54,16 +54,20 @@
 
 .footer__nav__items {
   height: 100%;
+
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-
   list-style-type: none;
   padding: 0;
 }
 
 .footer__nav__item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   border: 2px solid yellow;
   width: 100%;
