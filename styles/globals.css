@@ -12,6 +12,15 @@ body {
   height: -webkit-fill-available;
 }
 
+.a--nostyle {
+  color: black;
+}
+
+.a--nostyle:hover {
+  color: black;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 900px) {
   .mobile {
     display: block;
@@ -38,8 +47,9 @@ body {
   position: relative;
   color: #333;
   cursor: default;
-  width: 45%;
+  width: 30%;
   max-width: 150px;
+  min-width: 125px;
 }
 
 .dropdown .arrow {
@@ -62,6 +72,9 @@ body {
 }
 
 .dropdown .selected-value button {
+
+  line-height: 1.2;
+
   font-size: 1rem;
   background-color: #fff;
   border: 1px solid #ccc;

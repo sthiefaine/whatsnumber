@@ -27,7 +27,7 @@ export default function Form() {
     setCopy(true);
     setTimeout(() => {
       setCopy(false);
-    }, 1000);
+    }, 1500);
   };
 
   const historyNumbers = useSelector(
@@ -62,7 +62,7 @@ export default function Form() {
             </button>
           </a>
         </Link>
-        <CopyToClipboard text={phoneNumberValue} onCopy={() => handleCopy()}>
+        <CopyToClipboard text={whatsappUrl} onCopy={() => handleCopy()}>
           <button className={styles.button}>
             <p>{copy ? "Copied ✓" : "Copy ⧉"}</p>
           </button>

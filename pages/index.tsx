@@ -5,6 +5,7 @@ import Aside from "../components/Aside";
 import Header from "../components/Header";
 
 import { PhoneValue } from "../hooks/phoneValue";
+
 import Footer from "../components/Footer";
 
 const Home = () => {
