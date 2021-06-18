@@ -22,8 +22,6 @@ const Dropdown = () => {
 
   useEffect(() => {
     if (firstRender) {
-      console.log("ici", window.navigator.language.substring(3, 5));
-      console.log("ici 2", window.navigator.language);
       const navLangCode =
         window.navigator.language.substring(3, 5) ||
         window.navigator.language.substring(0, 2);
@@ -61,7 +59,7 @@ const Dropdown = () => {
               backgroundRepeat: "no-repeat",
               backgroundPosition: "10px 8px",
               paddingLeft: "20px",
-              backgroundSize: "42px",
+              backgroundSize: "35px",
             }}
           >
             {"+" + countryInfos.callingCodes[0] || ""}
