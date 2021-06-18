@@ -7,6 +7,14 @@ import Footer from "../components/Footer";
 
 import SearchBar from "../components/SearchBar";
 
+import {
+  ShareIcon,
+  AddIcon,
+  AddContactIcon,
+  TrashIcon,
+  Edit2Icon,
+} from "../icons/options";
+
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 
@@ -26,14 +34,29 @@ const History = () => {
           <main className={styles.main}>
             <SearchBar />
             <article className={styles.main__article}>
-              {historyNumbers.map((element, i) => {
-                return (
-                  <li key={element.id}>
-                    <p>{element.number}</p>
-                    <br />
-                  </li>
-                );
-              })}
+              <ul>
+                {historyNumbers.map((element, i) => {
+                  return (
+                    <li key={element.id}>
+                      <div>
+                        <p>{element.number}</p>
+                        <p>DATE</p>
+                      </div>
+                      <div>
+                        <span>
+                          <ShareIcon />
+                        </span>
+                        <span>
+                          <Edit2Icon />
+                        </span>
+                        <span>
+                          <TrashIcon />
+                        </span>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
             </article>
           </main>
           <Footer />

@@ -5,15 +5,13 @@ const SearchBar = () => {
     <>
       <div className={styles.searchBar}>
         <input
-          className="toto"
+          className={styles.searchBarInput}
           type="search"
           id="history-search"
           name="history"
           placeholder="Rechercher le numéro..."
           aria-label="Search through history content"
-          size={70}
         />
-
         <button>Cancel</button>
       </div>
     </>

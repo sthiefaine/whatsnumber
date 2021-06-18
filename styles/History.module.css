@@ -7,7 +7,6 @@
 }
 
 .main {
-  border: 2px solid rgb(207, 255, 192);
   background-color: blue;
   flex-grow: 1;
 }
@@ -21,6 +20,8 @@
   width: 100%;
 }
 
-.toto {
-  width: 100%;
+.searchBarInput {
+  display: block;
+  margin: 1rem auto;
+  width: 90%;
 }

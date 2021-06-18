@@ -58,7 +58,6 @@ export default function Form() {
           <a className="a--nostyle" rel="noopener noreferrer" target="_blank">
             <button className={styles.button} onClick={handleSendToHistory}>
               <p>Chat</p>
-
               <WhatsAppIcon />
             </button>
           </a>
