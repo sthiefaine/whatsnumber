@@ -6,7 +6,8 @@
 }
 
 .button__container {
-  background: red;
+  background: rgb(215, 218, 243);
+  border-radius: 12px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
@@ -14,12 +15,8 @@
 }
 .button {
   cursor: pointer;
-  background: rgb(81, 101, 253);
-  background: linear-gradient(
-    233deg,
-    rgb(55, 69, 172) 0%,
-    rgba(81, 101, 253, 1) 100%
-  );
+  background: #52b788;
+  background: linear-gradient(233deg, #52b788 0%, #52b788 100%);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -32,7 +29,7 @@
   width: 25vw;
   max-width: 100px;
   height: 100px;
-  border-radius: 5px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;

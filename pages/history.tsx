@@ -35,7 +35,7 @@ const History = () => {
             <SearchBar />
             <article className={styles.main__article}>
               <ul>
-                {historyNumbers.map((element, i) => {
+                {historyNumbers.map((element: any, i) => {
                   return (
                     <li key={element.id}>
                       <div>
