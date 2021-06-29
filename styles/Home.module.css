@@ -18,11 +18,12 @@
   justify-content: center;
   z-index: 2;
 
-  background-color: rgb(216, 63, 63);
+  background-color: #40916c;
 }
 
 .main {
-  background-color: blue;
+  background-color: #1b4332;
+
   flex-grow: 1;
 
   display: flex;
@@ -41,14 +42,12 @@
   bottom: 0;
   height: 3rem;
   width: 100%;
-
-  background-color: black;
 }
 
 .footer__nav {
   height: 100%;
   width: 100%;
-  background-color: rgb(43, 38, 38);
+  background-color: #40916c;
 }
 
 .footer__nav__items {
@@ -75,5 +74,5 @@
 .aside {
   width: 200px;
   height: 100vh;
-  background-color: rgb(58, 43, 92);
+  background-color: #40916c;
 }
