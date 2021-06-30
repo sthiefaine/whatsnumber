@@ -14,9 +14,10 @@
   margin-top: 10vh;
 }
 .button {
+  color: black;
   cursor: pointer;
-  background: #52b788;
-  background: linear-gradient(233deg, #52b788 0%, #52b788 100%);
+  background-color: #52b788;
+  background-color: linear-gradient(233deg, #52b788 0%, #52b788 100%);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -37,6 +38,7 @@
 
   margin: 1rem 0;
 }
+
 .button:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -55,6 +57,12 @@
   color: white;
   border: none;
 }
+
+.button:disabled {
+  background-color: rgb(141, 141, 141);
+  pointer-events: none;
+}
+
 .button:link,
 .button:visited {
   text-decoration: none;

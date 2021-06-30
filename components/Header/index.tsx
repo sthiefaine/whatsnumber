@@ -4,10 +4,8 @@ const Header = () => {
   return (
     <>
       <header className={styles.header + " mobile"}>
-        <div className={styles.logo}>L</div>
-
-        <button>S</button>
-        <button>T</button>
+        <div className={styles.logo + " " + styles.headerElement}>L</div>
+        <button className={styles.headerElement}>☀️</button>
       </header>
     </>
   );

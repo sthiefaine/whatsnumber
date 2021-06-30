@@ -12,6 +12,11 @@ body {
   height: -webkit-fill-available;
 }
 
+
+input {
+  color: none !important;
+}
+
 .a--nostyle {
   color: black;
 }

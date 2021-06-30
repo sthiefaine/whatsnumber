@@ -15,10 +15,14 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   z-index: 2;
 
   background-color: #40916c;
+}
+
+.headerElement {
+  margin: 0 0.9rem;
 }
 
 .main {
