@@ -12,6 +12,10 @@ body {
   height: -webkit-fill-available;
 }
 
+input {
+  color: none !important;
+}
+
 @media screen and (max-width: 900px) {
   .mobile {
     display: block;

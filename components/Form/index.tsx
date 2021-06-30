@@ -44,6 +44,7 @@ export default function Form() {
   };
 
   const whatsappUrl = "https://wa.me/" + phoneNumberValue;
+  const disabled = phoneNumberValue.length >= 8 ? false : true;
 
   return (
     <>
@@ -54,19 +55,24 @@ export default function Form() {
       </div>
 
       <div className={styles.button__container}>
-        <Link href={whatsappUrl}>
-          <a className="a--nostyle" rel="noopener noreferrer" target="_blank">
-            <button className={styles.button} onClick={handleSendToHistory}>
+        <button
+          disabled={disabled}
+          className={styles.button}
+          onClick={handleSendToHistory}
+        >
+          <Link href={whatsappUrl}>
+            <a className="a--nostyle" rel="noopener noreferrer" target="_blank">
               <p>Chat</p>
               <WhatsAppIcon />
-            </button>
-          </a>
-        </Link>
-        <CopyToClipboard text={phoneNumberValue} onCopy={() => handleCopy()}>
-          <button className={styles.button}>
+            </a>
+          </Link>
+        </button>
+
+        <button className={styles.button} disabled={disabled}>
+          <CopyToClipboard text={phoneNumberValue} onCopy={() => handleCopy()}>
             <p>{copy ? "Copied ✓" : "Copy ⧉"}</p>
-          </button>
-        </CopyToClipboard>
+          </CopyToClipboard>
+        </button>
       </div>
     </>
   );
