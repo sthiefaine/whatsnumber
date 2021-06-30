@@ -15,7 +15,7 @@ interface CountryInfosInterface {
 
 interface PhoneState {
   phoneInput: string;
-  countryInfos: Partial<CountryInfosInterface>;
+  countryInfos: CountryInfosInterface;
   phoneNumber: string;
 }
 
@@ -39,10 +39,7 @@ export const phoneSlice = createSlice({
   initialState: initialState,
 
   reducers: {
-    setCountry: (
-      state,
-      action: PayloadAction<Partial<CountryInfosInterface>>
-    ) => {
+    setCountry: (state, action: PayloadAction<CountryInfosInterface>) => {
       state.countryInfos = action.payload;
     },
     setPhoneInput: (state, action: PayloadAction<string>) => {
@@ -59,7 +56,7 @@ export const { setCountry, setPhoneInput, setPhoneNumber } = phoneSlice.actions;
 export default phoneSlice.reducer;
 
 // The function below is called a thunk and allows us to perform async logic.
-export const ExempleAsync = (value) => (dispatch) => {
+export const ExempleAsync = (value: any) => (dispatch: any) => {
   setTimeout(() => {
     dispatch();
   }, 1000);

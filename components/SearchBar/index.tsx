@@ -12,6 +12,7 @@ const SearchBar = () => {
           placeholder="Rechercher le numéro..."
           aria-label="Search through history content"
         />
+        <button>Cancel</button>
       </div>
     </>
   );

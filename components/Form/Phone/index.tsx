@@ -9,7 +9,7 @@ export default function PhoneForm() {
 
   const dispatch = useDispatch();
 
-  const handelOnChangePhone = (event) => {
+  const handelOnChangePhone = (event: any) => {
     dispatch(setPhoneInput(event.target.value));
   };
 

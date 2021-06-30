@@ -17,7 +17,6 @@ import {
 
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import React from "react";
 
 const History = () => {
   console.log("render History");

@@ -27,7 +27,7 @@ export default function Form() {
     setCopy(true);
     setTimeout(() => {
       setCopy(false);
-    }, 1000);
+    }, 1500);
   };
 
   const historyNumbers = useSelector(

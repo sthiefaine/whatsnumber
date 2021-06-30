@@ -19,7 +19,7 @@ export const PhoneValue = () => {
     }
 
     const countryDialCodeValueFormatted = countryValue.callingCodes[0].replace(
-      /[-]/g,
+      /[-+ ]/g,
       ""
     );
 
