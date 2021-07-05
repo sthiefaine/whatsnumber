@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { v4 as uuidv4 } from "uuid";
+const { v4: uuidv4 } = require("uuid");
 
 interface HistoryNumbers {
   id: string;
@@ -10,20 +10,6 @@ interface HistoryNumbers {
 let initialState = {
   historyNumbers: [],
 };
-
-const azerty = [
-  {
-    id: uuidv4(),
-    number: +33658200918,
-    name: "",
-  },
-
-  {
-    id: uuidv4(),
-    number: +336583442918,
-    name: "test",
-  },
-];
 
 export const historySlice = createSlice({
   name: "history",
@@ -38,7 +24,7 @@ export const historySlice = createSlice({
           number: action.payload,
           name: "",
         },
-      ];
+      ] as any;
     },
   },
 });

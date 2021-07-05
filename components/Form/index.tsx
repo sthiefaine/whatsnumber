@@ -31,7 +31,7 @@ export default function Form() {
   };
 
   const historyNumbers = useSelector(
-    (state: RootState) => state.history.historyNumbers
+    (state: RootState) => state.history.historyNumbers as any
   );
 
   const handleSendToHistory = () => {
@@ -69,7 +69,7 @@ export default function Form() {
         </button>
 
         <button className={styles.button} disabled={disabled}>
-          <CopyToClipboard text={phoneNumberValue} onCopy={() => handleCopy()}>
+          <CopyToClipboard text={whatsappUrl} onCopy={() => handleCopy()}>
             <p>{copy ? "Copied ✓" : "Copy ⧉"}</p>
           </CopyToClipboard>
         </button>
