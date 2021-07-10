@@ -23,12 +23,19 @@ const ListHistory = () => {
   );
 
   return (
-    <ul>
+    <ul className={styles.element}>
       {historyNumbers.map((element: any, i) => {
         return (
           <li className={styles.elements} key={element.id}>
             <div className={styles.elements__informations}>
-              <p className={styles.elements__information}>{element.number}</p>
+              <p
+                className={`
+                  ${styles.elements__information}
+                  ${styles.elements__information__title}
+                `}
+              >
+                {element.number}
+              </p>
               <p className={styles.elements__information}>
                 {format(element.date, "dd/MM/yyyy HH:mm")}
               </p>
