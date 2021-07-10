@@ -9,6 +9,7 @@ interface HistoryNumbers {
 
 let initialState = {
   historyNumbers: [],
+  historySearch: "",
 };
 
 export const historySlice = createSlice({
@@ -18,18 +19,22 @@ export const historySlice = createSlice({
   reducers: {
     addNumberToHistory: (state, action: PayloadAction<string>) => {
       state.historyNumbers = [
-        ...state.historyNumbers,
         {
           id: uuidv4(),
+          date: Date.now(),
           number: action.payload,
           name: "",
-          date: Date.now(),
         },
+        ...state.historyNumbers,
       ] as any;
+    },
+
+    sethistorySearch: (state, action) => {
+      state.historySearch = action.payload;
     },
   },
 });
 
-export const { addNumberToHistory } = historySlice.actions;
+export const { addNumberToHistory, sethistorySearch } = historySlice.actions;
 
 export default historySlice.reducer;

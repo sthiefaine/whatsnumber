@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 import SearchBar from "../components/SearchBar";
+import Image from "next/image";
 
 import {
   ShareIcon,
@@ -18,6 +19,8 @@ import {
 
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
+import React from "react";
+import ListHistory from "../components/Lists/history";
 
 const History = () => {
   console.log("render History");
@@ -33,32 +36,26 @@ const History = () => {
         <div className={styles.container}>
           <Header />
           <main className={styles.main}>
-            <SearchBar />
-            <article className={styles.main__article}>
-              <ul>
-                {historyNumbers.map((element: any, i) => {
-                  return (
-                    <li key={element.id}>
-                      <div>
-                        <p>{element.number}</p>
-                        <p>{format(element.date, "dd/MM/yyyy HH:mm")}</p>
-                      </div>
-                      <div>
-                        <span>
-                          <ShareIcon />
-                        </span>
-                        <span>
-                          <Edit2Icon />
-                        </span>
-                        <span>
-                          <TrashIcon />
-                        </span>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-            </article>
+            {historyNumbers.length === 0 && (
+              <>
+                <div className={styles.button__container}>Historique vide.</div>
+                <Image
+                  className={styles.img__empty}
+                  src={`/image/Empty-amico.svg`}
+                  width="150px"
+                  height="150px"
+                  alt="Empty svg"
+                />
+              </>
+            )}
+            {historyNumbers.length > 0 && (
+              <>
+                <SearchBar />
+                <article className={styles.main__article}>
+                  <ListHistory />
+                </article>
+              </>
+            )}
           </main>
           <Footer />
         </div>
