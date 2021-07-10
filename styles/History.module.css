@@ -17,11 +17,14 @@
 }
 
 .searchBar {
+  margin-top: 1rem;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .searchBarInput {
-  display: block;
-  margin: 1rem auto;
-  width: 90%;
+  display: inline;
+
+  width: 80%;
 }
