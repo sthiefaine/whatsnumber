@@ -23,6 +23,7 @@ export const historySlice = createSlice({
           id: uuidv4(),
           number: action.payload,
           name: "",
+          date: Date.now(),
         },
       ] as any;
     },

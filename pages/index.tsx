@@ -4,16 +4,16 @@ import Form from "../components/Form";
 import Aside from "../components/Aside";
 import Header from "../components/Header";
 
-import { PhoneValue } from "../hooks/phoneValue";
-
 import Footer from "../components/Footer";
+
+import { PhoneValue } from "../hooks/phoneValue";
 
 const Home = () => {
   console.log("render HOME");
-  PhoneValue();
 
   return (
     <>
+      <PhoneValue />
       <>
         <Aside />
         <div className={styles.container}>

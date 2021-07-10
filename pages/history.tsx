@@ -1,4 +1,5 @@
-// import styles from "../styles/History.module.css";
+import { format } from "date-fns";
+
 import styles from "../styles/History.module.css";
 
 import Aside from "../components/Aside";
@@ -40,7 +41,7 @@ const History = () => {
                     <li key={element.id}>
                       <div>
                         <p>{element.number}</p>
-                        <p>DATE</p>
+                        <p>{format(element.date, "dd/MM/yyyy HH:mm")}</p>
                       </div>
                       <div>
                         <span>

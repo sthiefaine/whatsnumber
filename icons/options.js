@@ -69,11 +69,11 @@ export const AddIcon = () => {
       width="28"
       height="28"
       viewBox="0 0 24 24"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke="#000000"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <line x1="12" y1="5" x2="12" y2="19" />
@@ -92,8 +92,8 @@ export const AddContactIcon = () => {
       stroke-width="1.5"
       stroke="#000000"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <circle cx="9" cy="7" r="4" />
@@ -113,8 +113,8 @@ export const TrashIcon = () => {
       stroke-width="1.5"
       stroke="#000000"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <line x1="4" y1="7" x2="20" y2="7" />
@@ -133,11 +133,11 @@ export const Edit2Icon = () => {
       width="28"
       height="28"
       viewBox="0 0 24 24"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke="#000000"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M20 17v-12c0 -1.121 -.879 -2 -2 -2s-2 .879 -2 2v12l2 2l2 -2z" />

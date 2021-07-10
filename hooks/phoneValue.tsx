@@ -14,10 +14,6 @@ export const PhoneValue = () => {
   );
 
   useEffect((): any => {
-    if (!phoneInputValue.trim()) {
-      return dispatch(setPhoneNumber(""));
-    }
-
     const countryDialCodeValueFormatted = countryValue.callingCodes[0].replace(
       /[-+ ]/g,
       ""
@@ -34,4 +30,6 @@ export const PhoneValue = () => {
       setPhoneNumber(countryDialCodeValueFormatted + phoneInputValueFormatted)
     );
   }, [phoneInputValue, countryValue]);
+
+  return null;
 };
